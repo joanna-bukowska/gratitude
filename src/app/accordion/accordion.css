@@ -1,0 +1,36 @@
+.card-header {
+    padding: 15px;
+    border: 2px solid var(--brown);
+    background: url(/arrow_down.svg) center right 10px no-repeat var(--pink-light);
+    cursor: pointer;
+}
+
+.card-header.expanded {
+    background: url(/arrow_up.svg) center right 10px no-repeat var(--pink-light);
+}
+
+.card-body {
+    border: 2px solid var(--brown);
+    border-top: none;
+    background-color: var(--beige);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.accordion-content.expanded {
+    max-height: 500px;
+    transition: all 1.5s ease;
+}
+
+h5.mb-0 {
+    margin: 0;
+    font-weight: bold;
+}
+
+h5.mb-0:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,22 @@
+.card {
+    border-width: 2px;
+    border-color: var(--brown);
+    background-color: var(--yellow-light);
+}
+
+.form-control:focus {
+    border-color: var(--brown);
+    box-shadow: 0 0 0 0.2rem rgba(146, 110, 105, 0.25);
+}
+
+.list-group-item {
+    padding-left: 50px;
+    border-width: 2px;
+    border-color: var(--brown);
+    background: url("/rose_brown.svg") no-repeat center left 10px var(--yellow-light);
+    background-size: 30px;
+}
+
+.list-group-item:not(:first-child) {
+    border-top: none;
+}

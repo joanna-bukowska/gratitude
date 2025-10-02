@@ -1,0 +1,31 @@
+<div class="container">
+    <h2 class="text-center mb-4">Mój powód do wdzięczności</h2>
+
+    <div class="card p-3 mb-5">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <input class="form-control" [(ngModel)]="newGratitudeTitle" placeholder="powód wdzięczności">
+            </div>
+            <div class="col-md-4">
+                <input class="form-control" [(ngModel)]="newGratitudeDate" type="date" placeholder="data">
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary w-100" (click)="addGratitude()">Dodaj</button>
+            </div>
+        </div>
+    </div>
+
+
+    <h2 class="text-center mb-4">Moje drzewko wdzięczności</h2>
+
+    <ul class="list-group mb-5">
+        @for (gratitude of gratitudes; track gratitude.id; let i = $index) {
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{gratitude.title}} {{gratitude.date | date: 'dd.MM.yyyy'}}
+            <button class="btn btn-danger" (click)="deleteGratitude(i)">Usuń</button>
+        </li>
+        }
+    </ul>
+</div>

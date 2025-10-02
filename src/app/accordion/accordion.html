@@ -1,0 +1,43 @@
+<div class="container mb-5">
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header" id="headingOne" (click)="toggle(0)" [class.expanded]="openStates[0]">
+                <h5 class="mb-0">
+                    Czym jest wdzięczność?
+                </h5>
+            </div>
+            <div class="accordion-content" [class.expanded]="openStates[0]">
+                <div class="card-body">
+                    <b>Wdzięczność</b> to świadome docenianie pozytywnych aspektów życia, ludzi i doświadczeń, które przekracza zwykłe "dziękuję" i staje się postawą życiową. To uczucie radości i uznania za to, co otrzymujemy, a także za trudne doświadczenia,
+                    które nas czegoś nauczyły. Psychologicznie jest to emocja o wysokiej częstotliwości, pozytywnie wpływającą na jakość życia, samopoczucie i relacje.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo" (click)="toggle(1)" [class.expanded]="openStates[1]">
+                <h5 class="mb-0">
+                    Dlaczego warto praktykować wdzięczność?
+                </h5>
+            </div>
+            <div class="accordion-content" [class.expanded]="openStates[1]">
+                <div class="card-body">
+                    Warto praktykować wdzięczność, ponieważ przynosi liczne korzyści dla zdrowia psychicznego i fizycznego, poprawia jakość relacji z innymi oraz zwiększa ogólne poczucie szczęścia i satysfakcji z życia. Wdzięczność redukuje stres i negatywne emocje, zwiększa
+                    odporność psychiczną i pomaga lepiej radzić sobie z trudnościami.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree" (click)="toggle(2)" [class.expanded]="openStates[2]">
+                <h5 class="mb-0">
+                    Co wpisać do dziennika wdzięczności?
+                </h5>
+            </div>
+            <div class="accordion-content" [class.expanded]="openStates[2]">
+                <div class="card-body">
+                    Do dziennika wdzięczności możesz wpisywać małe i duże rzeczy, za które jesteś wdzięczny, skupiając się na szczegółach i emocjach, jakie budzą te zdarzenia. Mogą to być codzienne momenty, takie jak zapach kawy, rozmowa z przyjacielem, poczucie spokoju
+                    po długim dniu, a także większe osiągnięcia. Ważne jest, aby praktykować uważność i regularnie zwracać uwagę na pozytywne aspekty życia, co pomaga budować bardziej pozytywne nastawienie.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
