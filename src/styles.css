@@ -10,6 +10,8 @@
     --yellow-light: #EFCA90;
     --green: #4C9A6A;
     --green-light: #b7d277;
+    --grey: #393939;
+    --grey-light: #767676;
     --gradient-brown: linear-gradient(90deg, var(--brown) 0%, var(--pink) 100%);
     --gradient-brown-light: linear-gradient(90deg, var(--brown-light) 0%, var(--pink-light) 100%);
 }
@@ -47,15 +49,24 @@ h6 {
     color: var(--black);
 }
 
+.btn-secondary {
+    border: none;
+    background-color: var(--grey);
+    font-weight: bold;
+}
+
+.btn-secondary:hover {
+    background-color: var(--grey-light);
+}
+
 .btn-danger {
-    border-color: var(--brown);
+    border: none;
     background-color: var(--brown);
     color: var(--white);
     font-weight: bold;
 }
 
 .btn-danger:hover {
-    border-color: var(--brown-light);
     background-color: var(--brown-light);
     color: var(--white);
 }
