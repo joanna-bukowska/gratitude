@@ -20,6 +20,10 @@ export class GratitudeList implements OnInit {
 
   gratitudes: Gratitude[] = [];
 
+  // Modal state
+  showDeleteModal: boolean = false;
+  itemToDeleteIndex: number = -1;
+
   ngOnInit(): void {
     let savedGratitudes = localStorage.getItem("gratitudes");
     if (!savedGratitudes) {
@@ -59,9 +63,20 @@ export class GratitudeList implements OnInit {
   }
 
   deleteGratitude(index: number) {
-    if (confirm('Czy na pewno chcesz usunąć tę wdzięczność?')) {
-      this.gratitudes.splice(index, 1);
+    this.itemToDeleteIndex = index;
+    this.showDeleteModal = true;
+  }
+
+  confirmDelete() {
+    if (this.itemToDeleteIndex >= 0) {
+      this.gratitudes.splice(this.itemToDeleteIndex, 1);
       localStorage.setItem("gratitudes", JSON.stringify(this.gratitudes));
     }
+    this.closeDeleteModal();
+  }
+
+  closeDeleteModal() {
+    this.showDeleteModal = false;
+    this.itemToDeleteIndex = -1;
   }
 }

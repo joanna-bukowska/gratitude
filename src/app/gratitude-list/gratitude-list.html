@@ -28,4 +28,24 @@
         </li>
         }
     </ul>
+
+    <!-- Delete Confirmation Modal -->
+    @if (showDeleteModal) {
+    <div class="modal-backdrop" (click)="closeDeleteModal()">
+        <div class="modal-dialog" (click)="$event.stopPropagation()">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Potwierdź usunięcie</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Czy na pewno chcesz usunąć tę wdzięczność?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" (click)="closeDeleteModal()">Anuluj</button>
+                    <button type="button" class="btn btn-danger" (click)="confirmDelete()">Usuń</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
 </div>
