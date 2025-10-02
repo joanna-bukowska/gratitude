@@ -9,6 +9,12 @@
     box-shadow: 0 0 0 0.2rem rgba(146, 110, 105, 0.25);
 }
 
+@media (max-width: 767px) {
+    .form-control {
+        margin-bottom: 10px;
+    }
+}
+
 .list-group-item {
     padding-left: 50px;
     border-width: 2px;
