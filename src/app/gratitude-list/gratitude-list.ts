@@ -59,7 +59,9 @@ export class GratitudeList implements OnInit {
   }
 
   deleteGratitude(index: number) {
-    this.gratitudes.splice(index, 1);
-    localStorage.setItem("gratitudes", JSON.stringify(this.gratitudes))
+    if (confirm('Czy na pewno chcesz usunąć tę wdzięczność?')) {
+      this.gratitudes.splice(index, 1);
+      localStorage.setItem("gratitudes", JSON.stringify(this.gratitudes));
+    }
   }
 }
